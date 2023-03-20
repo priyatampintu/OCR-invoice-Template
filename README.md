@@ -145,16 +145,16 @@ python train.py --config config/train_sroie.yaml
 After successfully trained your model. Weight file (pytorch_model.bin) saved in directory(result/train_sroie/20230320_103158/pytorch_model.bin).
 
 ## STEP 6. Model evaluation and performance
+With the trained model, test images and ground truth parses, you can get inference results and accuracy scores.
 There are two major parameters to measure object detection model's perforamnce:
 
     1. mAP(Mean Average Precision)
     2. Performance Matrix(Accuracy, Precision, Recall)
-
-![Logo](https://raw.githubusercontent.com/priyatampintu/image-clssification-shirtsandtshrts/master/examples/confusion_matrix.png)
-
-![Logo](https://raw.githubusercontent.com/priyatampintu/image-clssification-shirtsandtshrts/master/examples/results.png)
-
-![Logo](https://raw.githubusercontent.com/priyatampintu/image-clssification-shirtsandtshrts/master/examples/R_curve.png)
+ ```bash
+    python test.py --dataset_name_or_path ../sroie_donut/test/ --pretrained_model_name_or_path ./result/train_sroie/20230320_103158 --save_path ./result/output.json
+    100%|█████████████| 100/100 [00:35<00:00,  2.80it/s]
+    Total number of samples: 100, Tree Edit Distance (TED) based accuracy score: 0.9329639764131697, F1 accuracy score: 0.8606020841373987
+```
 
 ## STEP 7. Test model
 Downlod weight file from https://drive.google.com/file/d/1Z7guW2Mxqim7FXPry4i2TroZ0L1w5CSh/view?usp=share_link    
