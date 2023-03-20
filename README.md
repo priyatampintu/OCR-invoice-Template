@@ -77,7 +77,7 @@ Images and lablel's name should be same with jpg and json format.
      .
 
 
-## STEP 4. Modify the label_map.txt file
+## STEP 4. Modify the metadata.jsonl file
 
 Enter the label and number.
 
