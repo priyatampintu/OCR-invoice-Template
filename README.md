@@ -84,18 +84,10 @@ item {
 ```bash
 # import library
 
-from ultralytics import YOLO
-from PIL import Image
-import cv2
-
-# training model from scratch for custom dataset
-model = YOLO()
-
-# can tune hyperparameter like batchsize = 16 img_size = 640(default) etc.
-model.train(data="data.yaml", epochs = 100, imgsz=1024, plots=True)
+python train.py --config config/train_sroie.yaml
 ```
 
-![Logo](https://raw.githubusercontent.com/priyatampintu/image-clssification-shirtsandtshrts/master/examples/train.jpg)
+![Logo](https://raw.githubusercontent.com/priyatampintu/OCR-invoice-Template/main/examples/training_0cr.jpg)
 
 After successfully trained your model. Weight file (best.pt) saved in directory(runs/detect/weights/best.pt).
 
@@ -113,18 +105,20 @@ There are two major parameters to measure object detection model's perforamnce:
 
 ## STEP 7. Test model
 
-    from ultralytics import YOLO
+    from donut import DonutModel
     from PIL import Image
-    import cv2
-    
-    # load custom model
-    model = YOLO("best.pt")
-    
-    # accepts all formats - image/dir/Path/URL/video/PIL/ndarray. 0 for webcam
-    # from PIL
-    im1 = Image.open("test.jpg")
-
-    results = model.predict(source=im1, save=True, save_txt=True)  # save predictions as labels
+    import torch
+    model = DonutModel.from_pretrained("./donut/result/train_sroie/20230320_103158")
+    if torch.cuda.is_available():
+      model.half()
+      device = torch.device("cuda")
+      model.to(device)
+    else:
+      model.encoder.to(torch.bfloat16)
+    model.eval()
+    image = Image.open("examples/example-1.jpg").convert("RGB")
+    output = model.inference(image=image, prompt="<s_sroie-donut>")
+    print(output)
 
 ![Logo](https://raw.githubusercontent.com/priyatampintu/OCR-invoice-Template/main/examples/result1.jpg)
 ![Logo](https://raw.githubusercontent.com/priyatampintu/OCR-invoice-Template/main/examples/result2.jpg)
@@ -138,25 +132,26 @@ There are multiple ways to deploy project on server like restAPI:
     1. Flask
     2. Streamlit 
     3. Fastapi
+    4. gradio
 
-### using Streamlit(CLI)
+### using Gradio(CLI)
 
-     # Please open port(8501) to run streamlit API
-     streamlit run app.py
+     # Please open port(7861) to run gradio API
+     python app.py
 
 
 ### Deploy using Docker 
 
-    1. docker build -t streamlit .
+    1. docker build -t invoice_ocr .
 
     # run docker container with nvidia-gpu support
-    2. docker run --gpus all -p 8501:8501 streamlit
+    2. docker run --gpus all -p 7861:7861 invoice_ocr
     
     # run docker container with cpu support
-    3. docker run -p 8501:8501 streamlit
+    3. docker run -p 7861:7861 invoice_ocr
 
     # run container in background
-    4. docker run -t -d --gpus all -p 8501:8501 streamlit
+    4. docker run -t -d --gpus all -p 7861:7861 invoice_ocr
 
     # to check running docker container
     5. docker ps 
