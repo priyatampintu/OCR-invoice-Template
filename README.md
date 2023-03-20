@@ -157,7 +157,8 @@ There are two major parameters to measure object detection model's perforamnce:
 ```
 
 ## STEP 7. Test model
-Downlod weight file from https://drive.google.com/file/d/1Z7guW2Mxqim7FXPry4i2TroZ0L1w5CSh/view?usp=share_link    
+Downlod weight file from https://drive.google.com/file/d/1Z7guW2Mxqim7FXPry4i2TroZ0L1w5CSh/view?usp=share_link 
+```bash
     from donut import DonutModel
     from PIL import Image
     import torch
@@ -172,7 +173,7 @@ Downlod weight file from https://drive.google.com/file/d/1Z7guW2Mxqim7FXPry4i2Tr
     image = Image.open("examples/example-1.jpg").convert("RGB")
     output = model.inference(image=image, prompt="<s_sroie-donut>")
     print(output)
-
+```
 ![Logo](https://raw.githubusercontent.com/priyatampintu/OCR-invoice-Template/main/examples/result1.jpg)
 ![Logo](https://raw.githubusercontent.com/priyatampintu/OCR-invoice-Template/main/examples/result2.jpg)
 ![Logo](https://raw.githubusercontent.com/priyatampintu/OCR-invoice-Template/main/examples/result3.jpg)
