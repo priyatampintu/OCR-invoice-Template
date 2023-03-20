@@ -1,6 +1,6 @@
-# Cattle-pose-detection(Documentation)
+# OCR for Invoice Template(Documentation)
 
-This is the object detection model for ANIMALL where will detect multiple pose of cattle like Side, Back, Face-Side, Front, Not clear and Milk can and at the end will deploy project on server using Docker and streamlit.
+This is the OCR Transfromer model(Donut) for AskGalore Digital India Pvt. Ltd where will extract Invoice Number and Total Amount from different different invoice bill like restuarent bill, fuel bill, mall bill etc and at the end will deploy project on server using Docker and gradio.
 
 ![Logo](https://raw.githubusercontent.com/priyatampintu/OCR-invoice-Template/main/examples/invoice_demo.jpg) 
 ## Try it Demo
