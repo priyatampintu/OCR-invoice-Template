@@ -82,27 +82,55 @@ Images and lablel's name should be same with jpg and json format.
 Enter the label and number.
 
 ```bash
-  item {
-  id: 0
-  name: 'Back'
-}
-item {
-  id: 1
-  name: 'Front'
-}
-item {
-  id: 2
-  name: 'Face-Side'
-}
-item {
-  id: 3
-  name: 'Side'
-}
-item {
-  id: 4
-  name: 'Not clear'
-}
+      dataset_name
+    ├── test
+    │   ├── metadata.jsonl
+    │   ├── {image_path0}
+    │   ├── {image_path1}
+    │             .
+    │             .
+    ├── train
+    │   ├── metadata.jsonl
+    │   ├── {image_path0}
+    │   ├── {image_path1}
+    │             .
+    │             .
+    └── validation
+        ├── metadata.jsonl
+        ├── {image_path0}
+        ├── {image_path1}
+                  .
+                  .
 ```
+Here’s the script I used to transform the data into JSON lines files, as well as copy the images into their respective folders:
+
+```bash
+      import os
+      import json
+      import shutil
+      import random
+      from tqdm.notebook import tqdm
+      lines = []
+      images = []
+      q=1
+      for ann in tqdm(random.sample(os.listdir("key"), 20)):
+          #print(ann)
+          if ann[:-4] + "jpg" not in os.listdir("sroie-donut/train") and ann[:-4] + "jpg" not in os.listdir("sroie-donut/validation"):
+              print(q, ann)
+              q+=1
+              if ann != ".ipynb_checkpoints":
+                  with open("key/" + ann) as f:
+                      data = json.load(f)
+              images.append(ann[:-4] + "jpg")
+              line = {"gt_parse": data}
+              lines.append(line)
+              with open("./sroie-donut/test/metadata.jsonl", 'w') as f:
+                  for i, gt_parse in enumerate(lines):
+                      line = {"file_name": images[i], "ground_truth": json.dumps(gt_parse)}
+                      f.write(json.dumps(line) + "\n")
+              shutil.copyfile("img/" + images[i], "./sroie-donut/test/" + images[i])
+```
+I simply ran this script three times, changing the names of the folders and the list slice ([:100]) each time, so that I had 100 examples in train and 20 examples each in validation and test.
 
 ## STEP 5. Training OCR Transformer model
 
@@ -129,7 +157,7 @@ There are two major parameters to measure object detection model's perforamnce:
 ![Logo](https://raw.githubusercontent.com/priyatampintu/image-clssification-shirtsandtshrts/master/examples/R_curve.png)
 
 ## STEP 7. Test model
-
+Downlod weight file from https://drive.google.com/file/d/1Z7guW2Mxqim7FXPry4i2TroZ0L1w5CSh/view?usp=share_link    
     from donut import DonutModel
     from PIL import Image
     import torch
