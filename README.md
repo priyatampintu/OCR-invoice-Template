@@ -2,10 +2,10 @@
 
 This is the object detection model for ANIMALL where will detect multiple pose of cattle like Side, Back, Face-Side, Front, Not clear and Milk can and at the end will deploy project on server using Docker and streamlit.
 
-![Logo](https://raw.githubusercontent.com/priyatampintu/image-clssification-shirtsandtshrts/master/examples/val_batch1_pred.jpg) 
+![Logo](https://raw.githubusercontent.com/priyatampintu/OCR-invoice-Template/main/examples/invoice_demo.jpg) 
 ## Try it Demo
 
-http://216.48.191.9:8501/
+http://216.48.191.9:7861/
 
 
 ## Tutorial
@@ -41,30 +41,30 @@ Images and lablel's name should be same with jpg and json format.
 
 ## STEP 2. Data Labeling
 
-> tree dataset_name
-dataset_name
-├── test
-│   ├── metadata.jsonl
-│   ├── {image_path0}
-│   ├── {image_path1}
-│             .
-│             .
-├── train
-│   ├── metadata.jsonl
-│   ├── {image_path0}
-│   ├── {image_path1}
-│             .
-│             .
-└── validation
-    ├── metadata.jsonl
-    ├── {image_path0}
-    ├── {image_path1}
+  > tree dataset_name
+  dataset_name
+  ├── test
+  │   ├── metadata.jsonl
+  │   ├── {image_path0}
+  │   ├── {image_path1}
+  │             .
+  │             .
+  ├── train
+  │   ├── metadata.jsonl
+  │   ├── {image_path0}
+  │   ├── {image_path1}
+  │             .
+  │             .
+  └── validation
+      ├── metadata.jsonl
+      ├── {image_path0}
+      ├── {image_path1}
               .
               .
 
-> cat dataset_name/test/metadata.jsonl
-{"file_name": {image_path0}, "ground_truth": "{\"gt_parse\": {ground_truth_parse}, ... {other_metadata_not_used} ... }"}
-{"file_name": {image_path1}, "ground_truth": "{\"gt_parse\": {ground_truth_parse}, ... {other_metadata_not_used} ... }"}
+  > cat dataset_name/test/metadata.jsonl
+  {"file_name": {image_path0}, "ground_truth": "{\"gt_parse\": {ground_truth_parse}, ... {other_metadata_not_used} ... }"}
+  {"file_name": {image_path1}, "ground_truth": "{\"gt_parse\": {ground_truth_parse}, ... {other_metadata_not_used} ... }"}
      .
      .
 
