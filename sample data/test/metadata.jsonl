@@ -1,0 +1,10 @@
+{"file_name": "135.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"CS00093091\", \"total\": \"99.00\"}}"}
+{"file_name": "336.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"7824F715\", \"total\": \"39.78\"}}"}
+{"file_name": "440.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"2022041483393\", \"total\": \"5416.20\"}}"}
+{"file_name": "215.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"T04-18/084227\", \"total\": \"109.70\"}}"}
+{"file_name": "070.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"18299/102/T0230\", \"total\": \"141.50\"}}"}
+{"file_name": "087.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"0000000011000136498\", \"total\": \"538.00\"}}"}
+{"file_name": "292.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"OR18041602170486\", \"total\": \"$8.20\"}}"}
+{"file_name": "242.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"45691\", \"total\": \"12.60\"}}"}
+{"file_name": "342.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"7805F712\", \"total\": \"19.31\"}}"}
+{"file_name": "112.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"0207140118000488\", \"total\": \"RM4.00\"}}"}

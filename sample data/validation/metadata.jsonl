@@ -1,0 +1,34 @@
+{"file_name": "372.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"91520042210208\", \"total\": \"557.00\"}}"}
+{"file_name": "150.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"00518087100028\", \"total\": \"30.00\"}}"}
+{"file_name": "328.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"7721F711\", \"total\": \"33.05\"}}"}
+{"file_name": "459.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"2021\\u201322 /CR\\u2212T2--12755\", \"total\": \"936\"}}"}
+{"file_name": "483.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"10\", \"total\": \"1384\"}}"}
+{"file_name": "374.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"91520042210208\", \"total\": \"557.00\"}}"}
+{"file_name": "475.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"10\", \"total\": \"1384\"}}"}
+{"file_name": "339.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"7817F712\", \"total\": \"7.97\"}}"}
+{"file_name": "460.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"2021\\u201322 /CR\\u2212T2--12755\", \"total\": \"936\"}}"}
+{"file_name": "480.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"10\", \"total\": \"1384\"}}"}
+{"file_name": "357.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"K00047587\", \"total\": \"803.00\"}}"}
+{"file_name": "032.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"OR18030302170430\", \"total\": \"$8.20\"}}"}
+{"file_name": "397.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"205796\", \"total\": \"1710.00\"}}"}
+{"file_name": "054.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"CS00018751\", \"total\": \"13.80\"}}"}
+{"file_name": "180.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"1-916166\", \"total\": \"41.95\"}}"}
+{"file_name": "089.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"CS00031180\", \"total\": \"7.00\"}}"}
+{"file_name": "161.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"000-074020\", \"total\": \"RM39.00\"}}"}
+{"file_name": "096.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"0010111111\", \"total\": \"9.65\"}}"}
+{"file_name": "392.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"205796\", \"total\": \"1710.00\"}}"}
+{"file_name": "131.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"1-161696\", \"total\": \"5.30\"}}"}
+{"file_name": "077.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"153887\", \"total\": \"23.25\"}}"}
+{"file_name": "265.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"BM-159572\", \"total\": \"4.70\"}}"}
+{"file_name": "373.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"91520042210208\", \"total\": \"557.00\"}}"}
+{"file_name": "218.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"GM3-46792\", \"total\": \"329.10\"}}"}
+{"file_name": "038.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"1000219\", \"total\": \"13.10\"}}"}
+{"file_name": "389.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"91520042210208\", \"total\": \"557.00\"}}"}
+{"file_name": "330.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"7730F710\", \"total\": \"20.21\"}}"}
+{"file_name": "277.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"CS-0004323\", \"total\": \"72.00\"}}"}
+{"file_name": "111.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"CS00012440\", \"total\": \"465.34\"}}"}
+{"file_name": "073.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"CS-20242\", \"total\": \"79.50\"}}"}
+{"file_name": "156.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"9722\", \"total\": \"RM 29.70\"}}"}
+{"file_name": "116.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"CS00012664\", \"total\": \"116.28\"}}"}
+{"file_name": "462.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"2021\\u201322 /CR\\u2212T2--12755\", \"total\": \"936\"}}"}
+{"file_name": "418.jpg", "ground_truth": "{\"gt_parse\": {\"Invoice Number\": \"000820\", \"total\": \"4348.00\"}}"}
