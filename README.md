@@ -6,6 +6,7 @@ I tried lots of library:
   2. PaddleOcr
   3. Yolo + paddleOcr
   4. Transformer
+
 But out of all these library best results is getting from OCR transformer model for this type of use case because invoice has dynamic templates and has not fixed position or area. Transformers deep learning model architecture to label words or answer given questions based on an image of a document (for example, you might either highlight and label the account number by annotating the image itself.Libraries such as HuggingFace’s transformers make it easier to work with open-source transformers models. In other words, it encodes the image (split into patches using a Swin Transformer) into token vectors it can then decode, or translate, into an output sequence in the form of a data structure (which can then be further parsed into JSON) using the BART decoder model, publicly pretrained on multilingual datasets. Any prompts fed into the model at inference time can also be decoded as well in the same architecture.
 ![Logo](https://raw.githubusercontent.com/priyatampintu/OCR-invoice-Template/main/examples/archtitecture.jpg)
 
