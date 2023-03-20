@@ -1,6 +1,13 @@
 # OCR for Invoice Template(Documentation)
 
-This is the OCR Transfromer model(Donut) for AskGalore Digital India Pvt. Ltd where will extract Invoice Number and Total Amount from different different invoice bill like restuarent bill, fuel bill, mall bill etc and at the end will deploy project on server using Docker and gradio.
+This is the OCR Transformer model(Donut) for AskGalore Digital India Pvt. Ltd where will extract Invoice Number and Total Amount from different different invoice bill like restuarent bill, fuel bill, mall bill etc and at the end will deploy project on server using Docker and gradio.
+I tried lots of library:
+  1. Pytesseract
+  2. PaddleOcr
+  3. Yolo + paddleOcr
+  4. Transformer
+But out of all these library best results is getting from OCR transformer model for this type of use case because invoice has dynamic templates and has not fixed position or area. Transformers deep learning model architecture to label words or answer given questions based on an image of a document (for example, you might either highlight and label the account number by annotating the image itself.Libraries such as HuggingFace’s transformers make it easier to work with open-source transformers models. In other words, it encodes the image (split into patches using a Swin Transformer) into token vectors it can then decode, or translate, into an output sequence in the form of a data structure (which can then be further parsed into JSON) using the BART decoder model, publicly pretrained on multilingual datasets. Any prompts fed into the model at inference time can also be decoded as well in the same architecture.
+![Logo](https://raw.githubusercontent.com/priyatampintu/OCR-invoice-Template/main/examples/archtitecture.jpg)
 
 ![Logo](https://raw.githubusercontent.com/priyatampintu/OCR-invoice-Template/main/examples/invoice_demo.jpg) 
 ## Try it Demo
@@ -31,9 +38,9 @@ Install ananconda environment
   conda activate invoice_ocr
   pip install -r requirements.txt
 ```
-## STEP 1. Data Collection
+## STEP 1. Finetuning Donut on a custom dataset
 
-Download images from cdn link and only images in JPG file format are allowed.
+It contains 100 images  to demonstrate Donut’s effectiveness. It’s a smaller dataset than CORD (which contains ~1000 images), and also much fewer labels (only Invoice NUmber and Total Amount).
 
 Images and lablel's name should be same with jpg and json format.
 
@@ -96,7 +103,7 @@ item {
 }
 ```
 
-## STEP 5. Training YOLO V8 model
+## STEP 5. Training OCR Transformer model
 
 ```bash
 # import library
@@ -106,7 +113,7 @@ python train.py --config config/train_sroie.yaml
 
 ![Logo](https://raw.githubusercontent.com/priyatampintu/OCR-invoice-Template/main/examples/training_0cr.jpg)
 
-After successfully trained your model. Weight file (best.pt) saved in directory(runs/detect/weights/best.pt).
+After successfully trained your model. Weight file (pytorch_model.bin) saved in directory(result/train_sroie/20230320_103158/pytorch_model.bin).
 
 ## STEP 6. Model evaluation and performance
 There are two major parameters to measure object detection model's perforamnce:
