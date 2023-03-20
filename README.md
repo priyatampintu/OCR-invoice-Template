@@ -126,11 +126,10 @@ There are two major parameters to measure object detection model's perforamnce:
 
     results = model.predict(source=im1, save=True, save_txt=True)  # save predictions as labels
 
-![Logo](https://raw.githubusercontent.com/priyatampintu/image-clssification-shirtsandtshrts/master/examples/predict.jpg)
-![Logo](https://raw.githubusercontent.com/priyatampintu/image-clssification-shirtsandtshrts/master/examples/test_back.jpg)
-![Logo](https://raw.githubusercontent.com/priyatampintu/image-clssification-shirtsandtshrts/master/examples/test_face_side.jpg)
-![Logo](https://raw.githubusercontent.com/priyatampintu/image-clssification-shirtsandtshrts/master/examples/test_front.jpg)
-![Logo](https://raw.githubusercontent.com/priyatampintu/image-clssification-shirtsandtshrts/master/examples/test_not_clear.jpg)
+![Logo](https://raw.githubusercontent.com/priyatampintu/OCR-invoice-Template/main/examples/result1.jpg)
+![Logo](https://raw.githubusercontent.com/priyatampintu/OCR-invoice-Template/main/examples/result2.jpg)
+![Logo](https://raw.githubusercontent.com/priyatampintu/OCR-invoice-Template/main/examples/result3.jpg)
+![Logo](https://raw.githubusercontent.com/priyatampintu/OCR-invoice-Template/main/examples/result4.jpg)
 
 ## STEP 8. Deploy Model on Server 
 
