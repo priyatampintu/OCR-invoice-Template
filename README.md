@@ -22,35 +22,52 @@ torch>=1.7
 cuda 11.0
 ```
 ## Setup Environment 
-git clone https://github.com/priyatampintu/Cattle-pose-detetcion.git
+git clone https://github.com/priyatampintu/OCR-invoice-Template.git
 
 Install ananconda environment
 ```bash
-  cd Cattle-pose-detetcion
-  conda create -n obj_detect python=3.9
-  conda activate obj_detect
+  cd OCR-invoice-Template
+  conda create -n invoice_ocr python=3.7
+  conda activate invoice_ocr
   pip install -r requirements.txt
 ```
 ## STEP 1. Data Collection
 
 Download images from cdn link and only images in JPG file format are allowed.
 
-Images and lablel's name should be same with jpg and txt format.
+Images and lablel's name should be same with jpg and json format.
 
-![Logo](https://raw.githubusercontent.com/priyatampintu/image-clssification-shirtsandtshrts/master/examples/sample.jpg)
+![Logo](https://raw.githubusercontent.com/priyatampintu/OCR-invoice-Template/main/examples/sample.jpg)
 
 ## STEP 2. Data Labeling
 
-Use labelimg to place the txt that stores the original image and object area in one folder.
-(The default folder is the images folder.)
+> tree dataset_name
+dataset_name
+├── test
+│   ├── metadata.jsonl
+│   ├── {image_path0}
+│   ├── {image_path1}
+│             .
+│             .
+├── train
+│   ├── metadata.jsonl
+│   ├── {image_path0}
+│   ├── {image_path1}
+│             .
+│             .
+└── validation
+    ├── metadata.jsonl
+    ├── {image_path0}
+    ├── {image_path1}
+              .
+              .
 
-Multiple labels can exist in a single image.
-Tip. If you set the default label for each Object, you do not need to enter labels one by one.
-Tip. The shortcut W is the area designation A is the previous image D is the next image Ctrl + S is Save.
+> cat dataset_name/test/metadata.jsonl
+{"file_name": {image_path0}, "ground_truth": "{\"gt_parse\": {ground_truth_parse}, ... {other_metadata_not_used} ... }"}
+{"file_name": {image_path1}, "ground_truth": "{\"gt_parse\": {ground_truth_parse}, ... {other_metadata_not_used} ... }"}
+     .
+     .
 
-It took about 50 minutes to label 500 images.
-
-![Logo](https://raw.githubusercontent.com/priyatampintu/image-clssification-shirtsandtshrts/master/examples/lableimg.jpg)
 
 ## STEP 4. Modify the label_map.txt file
 
@@ -108,7 +125,7 @@ There are two major parameters to measure object detection model's perforamnce:
     from donut import DonutModel
     from PIL import Image
     import torch
-    model = DonutModel.from_pretrained("./donut/result/train_sroie/20230320_103158")
+    model = DonutModel.from_pretrained("result/train_sroie/20230320_103158")
     if torch.cuda.is_available():
       model.half()
       device = torch.device("cuda")
