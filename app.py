@@ -1,8 +1,4 @@
-"""
-Donut
-Copyright (c) 2022-present NAVER Corp.
-MIT License
-"""
+
 import argparse
 
 import gradio as gr
