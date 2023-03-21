@@ -25,7 +25,7 @@ This tutorial was tested on Google Cloud Comute Engine and the VM has the follow
 60gb Ram
 1 x NVIDIA Tesla T4
 ubuntu 20.0.4
-python 3.9
+python 3.7
 torch>=1.7
 cuda 11.0
 ```
